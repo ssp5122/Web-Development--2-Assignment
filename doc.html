@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="list"></div>
+    <div class="container">
+        <div class="eventForm">
+            <form id="form">
+                <label for="eventTitle">EventTitle</label>
+                <input type="text" id="eventTitle"><br><br>
+                <label for="eventDate">EventDate</label>
+                <input type="date" id="eventDate"><br><br>
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="Conference">Conference</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Meetup">Meetup</option>
+                    <option value="Webinar">Webinar</option>
+                    <option value="Social">Social</option>
+                </select><br>
+                <label for="description">Description</label>
+                <textarea id="description"></textarea><br><br>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+        <div class="events">
+    <button type="button" id="clearAll">Clear All Events</button>
+    <button type="button" id="sampleEvent">Add Sample Events</button>
+    <div class="cards"></div>
+</div>
+
+<div class="dom"> You pressed: <div class="key"></div>
+        </div>
+    <script src="sem.js"></script>
+</body>
+</html>
