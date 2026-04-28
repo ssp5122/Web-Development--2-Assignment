@@ -12,25 +12,13 @@ function App() {
   ]);
 
   function addStudent(name, score) {
-    const newStudent = {
-      id: Date.now(),
-      name: name,
-      score: Number(score)
-    };
-
-    setStudents([...students, newStudent]);
+    setStudents([...students, { id: Date.now(), name, score: Number(score) }]);
   }
 
   function updateScore(id, newScore) {
-    const updated = students.map(function (student) {
-      if (student.id === id) {
-        return { ...student, score: Number(newScore) };
-      } else {
-        return student;
-      }
-    });
-
-    setStudents(updated);
+    setStudents(students.map((s) =>
+      s.id === id ? { ...s, score: Number(newScore) } : s
+    ));
   }
 
   return (
