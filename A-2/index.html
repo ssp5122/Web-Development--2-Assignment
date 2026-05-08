@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Weather Tracker</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="hero">
+            <p class="eyebrow">Assignment 2</p>
+            <h1>Async Weather Tracker</h1>
+            <p class="subtitle">Search a city, watch the async flow, and reuse your recent weather checks.</p>
+        </header>
+
+        <section class="dashboard" aria-label="Weather search dashboard">
+            <div class="panel search-panel">
+                <div class="panel-heading">
+                    <span>City Search</span>
+                    <small>Promise demo</small>
+                </div>
+
+                <form id="form" autocomplete="off">
+                    <label for="city">City name</label>
+                    <div class="input-row">
+                        <input type="text" id="city" placeholder="Mumbai, London, Tokyo..." required>
+                        <button type="submit" id="searchBtn">Search</button>
+                    </div>
+                </form>
+
+                <div class="history-block">
+                    <div class="section-title">Search History</div>
+                    <div class="historyBtn" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <section class="panel info" aria-live="polite">
+                <div class="panel-heading">
+                    <span>Weather Info</span>
+                    <small id="statusText">Ready</small>
+                </div>
+                <div class="empty-state">
+                    <strong>Start with a city.</strong>
+                    <span>The simulated API returns temperature, humidity, wind and conditions.</span>
+                </div>
+            </section>
+        </section>
+
+        <section class="consoleBox" aria-label="Event loop console">
+            <div class="panel-heading">
+                <span>Console - Event Loop</span>
+                <small>sync, microtask, macrotask</small>
+            </div>
+            <div class="console" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="scr.js"></script>
+</body>
+</html>
