@@ -3,7 +3,7 @@ import StudentRow from "./StudentRow";
 function StudentTable(props) {
   const students = props.students;
   const total = students.length;
-  const passed = students.filter((s) => s.score >= 50).length;
+  const passed = students.filter((s) => s.score >= 40).length;
   const avg = total ? Math.round(students.reduce((sum, s) => sum + s.score, 0) / total) : 0;
 
   return (
